@@ -4,7 +4,7 @@
 - [ ] Finalize Welcome biography if needed
 - [x] Add English CV
 - [x] Add French CV
-- [ ] Add elevator pitch video and set assets.pitch in js/main.js
+- [x] Add completed Elevator Pitch (YouTube video 8dX2oJsddDE, embedded on Welcome)
 - [ ] Add GitHub profile only if created and useful
 - [ ] Review both languages after every content update
 

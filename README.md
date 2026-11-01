@@ -6,7 +6,7 @@ A bilingual lifelong academic and professional portfolio for ENSEEIHT / Toulouse
 
 - `index.html`: Welcome, selected projects, elevator pitch
 - `engineering.html`: pathway, illustrated skills, compact projects and visual progression
-- `mobility.html`: international background, potential destinations at UPC and TUM, and languages
+- `mobility.html`: international background, potential destinations at UPC, TUM and EPFL, and languages
 - `sustainability.html`: civic experiences and sustainability reflection
 - `activities.html`: sports, guitar, editing, travel
 - `career.html`: career directions, career project, professional experiences, CV/LinkedIn/pitch resources, three role models
@@ -36,7 +36,6 @@ Place real files at:
 - `assets/images/profile.png`
 - `assets/documents/cv-ilias-mhani-en.pdf`
 - `assets/documents/cv-ilias-mhani-fr.pdf`
-- `assets/video/elevator-pitch.mp4`
 
 Then set the `assets` object in `js/main.js`:
 
@@ -45,16 +44,15 @@ const assets = window.portfolioAssets || {
   profile: 'assets/images/profile.png',
   cvEn: 'assets/documents/cv-ilias-mhani-en.pdf',
   cvFr: 'assets/documents/cv-ilias-mhani-fr.pdf',
-  pitch: 'assets/video/elevator-pitch.mp4',
   github: ''
 };
 ```
 
-Only set keys for files that actually exist. The final English and French CV PDFs are already included and linked from the static HTML, so they also work without JavaScript. Empty pitch and GitHub values retain their existing behaviour. Your original portrait is already included as `assets/images/profile.png` in static HTML on every page, with alt text “Mhani Ilias”. It is cropped visually using CSS object-fit and object-position; the image file is unmodified. A configured pitch uses a real HTML5 video with controls. A future GitHub profile can be enabled using `github`; it stays hidden until configured. No fake PDFs, videos or stock profile images are included.
+Only set keys for files that actually exist. The final English and French CV PDFs are already included and linked from the static HTML, so they also work without JavaScript. An empty GitHub value keeps that optional profile hidden. Your original portrait is already included as `assets/images/profile.png` in static HTML on every page, with alt text “Mhani Ilias”. It is cropped visually using CSS object-fit and object-position; the image file is unmodified. The completed pitch uses a vertical 9:16 YouTube iframe on Welcome, with no autoplay or custom video controls. A future GitHub profile can be enabled using `github`; it stays hidden until configured. No fake PDFs, videos or stock profile images are included.
 
 ## Project evidence and future projects
 
-Optional material is omitted until real assets are provided. Both final CVs are available. The elevator pitch retains a compact coming-soon state. Keep the required Three Role Models section in future simplification passes. Its three concise profiles use the supplied backgrounds of Simon Demessance, Danaël Christophe and Yassair Abdel Talla Fopa, with personal takeaways. No TIPE PDF, graphs, code, circuit photographs or diagrams are planned. If adding other approved media later, use descriptive relative links or semantic image/video elements in `assets/documents/`, `assets/images/` or `assets/video/`. Supply alt text for informative images. Reusable components include `.project-card`, `.media-card`, `.document-card`, `.timeline`, `.skill-tag`, `.reflection-card`, `.role-model-card`, `.placeholder-card`. Private content can use `.private-project` and the label “Private project — details available on request.”
+Optional material is omitted until real assets are provided. Both final CVs are available. The completed Elevator Pitch is embedded on Welcome; Career links to that section. Keep the required Three Role Models section in future simplification passes. Its three concise profiles use the supplied backgrounds of Simon Demessance, Danaël Christophe and Yassair Abdel Talla Fopa, with personal takeaways. No TIPE PDF, graphs, code, circuit photographs or diagrams are planned. If adding other approved media later, use descriptive relative links or semantic image/video elements in `assets/documents/`, `assets/images/` or `assets/video/`. Supply alt text for informative images. Reusable components include `.project-card`, `.media-card`, `.document-card`, `.timeline`, `.skill-tag`, `.reflection-card`, `.role-model-card`, `.placeholder-card`. Private content can use `.private-project` and the label “Private project — details available on request.”
 
 To add a project, copy an existing project HTML file, keep `../` for its shared CSS/JS/assets/navigation, update metadata and headings, add new translation keys in both languages, and add a link to the engineering page. Keep project documentation concise: title, context, what I did, tools and what I learned. Recruiters and professors should be able to scan it in 20–30 seconds. Distinguish confirmed facts, plans and personal reflections that still need completion. Do not invent outcomes.
 
@@ -83,4 +81,8 @@ Every dedicated project has a bilingual Back link. With meaningful same-tab port
 
 ## Layout and portfolio content
 
-The sidebar portrait becomes a compact photo/name/school row on mobile. Role-model cards contain the name, role, professional context, short summary and personal takeaway in both languages. Destination cards present UPC as preferred and TUM as an alternative, with links to official academic information. They do not imply admission or an exchange agreement. To enable the pitch, add the real MP4 and set `assets.pitch` as shown above; HTML5 video replaces the compact placeholder.
+The sidebar portrait becomes a compact photo/name/school row on mobile. Role-model cards contain the name, role, professional context, short summary and personal takeaway in both languages. Destination cards present UPC as preferred, TUM as an alternative and EPFL as another potential option, with links to official academic information. They do not imply admission or an exchange agreement. The pitch is hosted on YouTube with video ID `8dX2oJsddDE`; change the iframe URL in `index.html` if the video is replaced.
+
+## Elevator Pitch and awareness experiences
+
+Welcome contains the single 9:16 iframe (`https://www.youtube.com/embed/8dX2oJsddDE`) with the title “Ilias Mhani — Elevator Pitch”. The Career resource card links to `index.html#elevator-pitch`, and the Welcome action scrolls to the same section. YouTube supplies keyboard-accessible controls; autoplay is not enabled. The civic page separates community engagement from the Climate Fresk workshop and circular-economy conference, using concise EN/FR experience and reflection cards.
